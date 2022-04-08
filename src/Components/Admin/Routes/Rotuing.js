@@ -9,6 +9,7 @@ import Gallery from "../Gallery";
 import Contact from "../Contact";
 import Navbar from "../Navbar";
 import ResetPassword from "../ResetPassword";
+import AddSlider from "../AddSlider";
 
 const Rotuing = () => {
   return (
@@ -22,6 +23,7 @@ const Rotuing = () => {
       <Route path="/contact" exact element={<Contact />}></Route>
       <Route path="/about" exact element={<About />}></Route>
       <Route path="/gallery" exact element={<Gallery />}></Route>
+      <Route path="/addslider" element={<AddSlider />}></Route>
       {/* <Route path="/uiconfig" exact element={<UiConfig></UiConfig>}></Route> */}
     </Routes>
   );
