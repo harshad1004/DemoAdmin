@@ -1,18 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const AddSlider = (props) => {
-  const [slider, setSlider] = useState({
-    image: "",
-  });
-  const sliderAddHandler = () => {
-    console.log("slider from addslider", slider);
-    props.sliderData(slider);
-  };
-  const handleChnage = (e) => {
-    e.preventDefault();
-    console.log(e.target.files[0].name, "e file");
-    setSlider(e.target.files[0]);
-  };
+const AddAbout = () => {
   return (
     <>
       <div
@@ -35,15 +23,21 @@ const AddSlider = (props) => {
               ></button>
             </div>
             <div className="modal-body">
-              <h6>Add Image</h6>
-              <input onChange={handleChnage} type="file" name="image"></input>
+              <form>
+                <div className="form-group">
+                  <label>Password</label>
+                  <input
+                    style={{ border: "1px solid !important" }}
+                    type="password"
+                    className="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Password"
+                  />
+                </div>
+              </form>
             </div>
             <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={sliderAddHandler}
-              >
+              <button type="button" className="btn btn-primary">
                 Add
               </button>
               <button
@@ -61,4 +55,4 @@ const AddSlider = (props) => {
   );
 };
 
-export default AddSlider;
+export default AddAbout;
