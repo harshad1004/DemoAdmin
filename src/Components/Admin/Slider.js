@@ -1,7 +1,28 @@
 import React, { useState } from "react";
 import AddSlider from "./AddSlider";
+const dummy = [
+  {
+    id: "1",
+    image: "../assets/img/team-2.jpg",
+  },
+  {
+    id: "2",
+    image: "../assets/img/team-2.jpg",
+  },
+  {
+    id: "3",
+    image: "../assets/img/team-2.jpg",
+  },
+];
 
 const Slider = () => {
+  const [slider, setSlider] = useState("");
+  const sliderDataHandler = (slide) => {
+    console.log(slide, "slide data in slide");
+    const data = slide;
+    console.log(data, "data");
+    setSlider(slide);
+  }; 
   return (
     <>
       <div className="container-fluid py-4">
@@ -47,19 +68,21 @@ const Slider = () => {
                         <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
                           DELETE SLIDE
                         </th>
-                        {/* <th className="text-secondary opacity-7"></th> */}
                       </tr>
                     </thead>
                     <tbody>
+                      {/* {slider?.map((slide) => ( */}
                       <tr>
                         <td className="align-middle text-center text-sm">
-                          <p className="text-lg font-weight-bold mb-0">1</p>
+                          <p className="text-lg font-weight-bold mb-0">
+                            {/* {slider.id} */}1
+                          </p>
                         </td>
                         <td className="align-middle text-center text-sm">
                           <div>
                             <div>
                               <img
-                                src="../assets/img/team-2.jpg"
+                                src={slider.name}
                                 className="avatar avatar-xl me-3 border-radius-lg"
                                 alt="user1"
                               />
@@ -82,37 +105,7 @@ const Slider = () => {
                           </button>
                         </td>
                       </tr>
-                      <tr>
-                        <td className="align-middle text-center text-sm">
-                          <p className="text-lg font-weight-bold mb-0">1</p>
-                        </td>
-                        <td className="align-middle text-center text-sm">
-                          <div>
-                            <div>
-                              <img
-                                src="../assets/img/team-2.jpg"
-                                className="avatar avatar-xl me-3 border-radius-lg"
-                                alt="user1"
-                              />
-                            </div>
-                          </div>
-                        </td>
-
-                        <td className="align-middle text-center text-lg">
-                          <span className="badge badge-sm bg-gradient-success">
-                            Active
-                          </span>
-                        </td>
-                        <td className="align-middle text-center text-lg">
-                          <button
-                            className="badge badge-sm bg-gradient-danger"
-                            // data-toggle="tooltip"
-                            // data-original-title="Edit user"
-                          >
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
+                      {/* ))} */}
                     </tbody>
                   </table>
                 </div>
@@ -121,7 +114,7 @@ const Slider = () => {
           </div>
         </div>
       </div>
-      <AddSlider></AddSlider>
+      <AddSlider sliderData={sliderDataHandler}></AddSlider>
     </>
   );
 };
