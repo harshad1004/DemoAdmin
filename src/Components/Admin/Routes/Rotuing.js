@@ -10,6 +10,8 @@ import Contact from "../Contact";
 import Navbar from "../Navbar";
 import ResetPassword from "../ResetPassword";
 import AddSlider from "../AddSlider";
+import AddAbout from "../AddAbout";
+import AddGallery from "../AddGallery";
 
 const Rotuing = () => {
   return (
@@ -17,14 +19,19 @@ const Rotuing = () => {
       <Route path="/" exact element={<SignUp />}></Route>
       <Route path="/reset" exact element={<ResetPassword />}></Route>
       <Route path="/dashboard" exact element={<Dashboard />}></Route>
-      <Route path="/navbar" exact element={<Navbar />}></Route>
-      <Route path="/sidebar" exact element={<Sidebar />}></Route>
-      <Route path="/slider" exact element={<Slider />}></Route>
       <Route path="/contact" exact element={<Contact />}></Route>
-      <Route path="/about" exact element={<About />}></Route>
-      <Route path="/gallery" exact element={<Gallery />}></Route>
+
+      <Route path="/slider" exact element={<Slider />}></Route>
       <Route path="/addslider" element={<AddSlider />}></Route>
-      {/* <Route path="/uiconfig" exact element={<UiConfig></UiConfig>}></Route> */}
+
+      <Route path="/about" exact element={<About />}></Route>
+      <Route path="/addabout" exact element={<AddAbout />}></Route>
+
+      <Route path="/gallery" exact element={<Gallery />}></Route>
+      <Route path="/addgallery" exact element={<AddGallery />}></Route>
+
+      <Route path="/sidebar" exact element={<Sidebar />}></Route>
+      <Route path="/navbar" exact element={<Navbar />}></Route>
     </Routes>
   );
 };

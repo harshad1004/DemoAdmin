@@ -48,7 +48,7 @@ const About = () => {
                           Description
                         </th>
                         <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
-                          DELETE SLIDE
+                          DELETE
                         </th>
                       </tr>
                     </thead>

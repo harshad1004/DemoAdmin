@@ -33,12 +33,12 @@ const ResetPassword = () => {
                     className="text-start"
                     style={{ padding: "20px" }}
                   >
+                    <label className="form-label">Password</label>
                     <div className="input-group input-group-outline mb-3">
-                      <label className="form-label">Password</label>
                       <input type="password" className="form-control" />
                     </div>
+                    <label className="form-label">Retype Password</label>
                     <div className="input-group input-group-outline mb-3">
-                      <label className="form-label">Retype Password</label>
                       <input type="password" className="form-control" />
                     </div>
                     {/* <div className="form-check form-switch d-flex align-items-center mb-3">
