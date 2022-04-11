@@ -4,12 +4,14 @@ const ResetPassword = () => {
   return (
     <main className="main-content  mt-0">
       <div
-        className="page-header align-items-start min-vh-100"
+        className="page-header align-items-start min-vh-80"
         style={{
           backgroundImage: `url(${
             process.env.PUBLIC_URL +
             "./assets/img/illustrations/illustration-signin.jpg"
           })`,
+          width: "95%",
+          borderRadius: "15px",
         }}
       >
         <span className="mask bg-gradient-dark opacity-6"></span>

@@ -19,7 +19,7 @@ const AddAbout = () => {
             <div className="modal-body">
               <form>
                 <div className="form-group">
-                  <label for="recipient-name" className="col-form-label">
+                  <label htmlFor="recipient-name" className="col-form-label">
                     Image
                   </label>
                   <input
@@ -30,7 +30,7 @@ const AddAbout = () => {
                   />
                 </div>
                 <div className="form-group">
-                  <label for="recipient-name" className="col-form-label">
+                  <label htmlFor="recipient-name" className="col-form-label">
                     Name
                   </label>
                   <input
@@ -41,7 +41,7 @@ const AddAbout = () => {
                   />
                 </div>
                 <div className="form-group">
-                  <label for="message-text" className="col-form-label">
+                  <label htmlFor="message-text" className="col-form-label">
                     Description
                   </label>
                   <input

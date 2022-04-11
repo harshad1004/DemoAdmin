@@ -16,9 +16,9 @@ import AddGallery from "../AddGallery";
 const Rotuing = () => {
   return (
     <Routes>
-      <Route path="/" exact element={<SignUp />}></Route>
+      <Route path="/signup" exact element={<SignUp />}></Route>
       <Route path="/reset" exact element={<ResetPassword />}></Route>
-      <Route path="/dashboard" exact element={<Dashboard />}></Route>
+      <Route path="/" exact element={<Dashboard />}></Route>
       <Route path="/contact" exact element={<Contact />}></Route>
 
       <Route path="/slider" exact element={<Slider />}></Route>
@@ -30,7 +30,7 @@ const Rotuing = () => {
       <Route path="/gallery" exact element={<Gallery />}></Route>
       <Route path="/addgallery" exact element={<AddGallery />}></Route>
 
-      <Route path="/sidebar" exact element={<Sidebar />}></Route>
+      {/* <Route path="/sidebar" exact element={<Sidebar />}></Route> */}
       <Route path="/navbar" exact element={<Navbar />}></Route>
     </Routes>
   );
