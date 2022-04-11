@@ -3,6 +3,10 @@ import React from "react";
 
 const Navbar = () => {
   return (
+    // <div
+    //   className="bg-gradient-primary border-radius-lg"
+    //   style={{ marginTop: "18px" }}
+    // >
     <nav
       className="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl"
       id="navbarBlur"
@@ -13,16 +17,14 @@ const Navbar = () => {
           className="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4"
           id="navbar"
         >
-          <div className="ms-md-auto pe-md-3 d-flex align-items-center">
-            {/* <div className="input-group input-group-outline">
-              <label className="form-label">Type here...</label>
-              <input type="text" className="form-control" />
-            </div> */}
-          </div>
           <div className="navbar-nav  justify-content-end">
-            <div className="nav-item d-flex align-items-center font-weight-bold">
-              <button type="button" className="btn btn-link">
-                <i className="fa fa-user me-sm-2"></i>
+            <div className="nav-item d-flex align-items-center font-weight-bold ">
+              <button
+                type="button"
+                className="btn btn-lg btn-link btn-outline-secondary border-radius-lg "
+                style={{ borderWidth: "2px" }}
+              >
+                <i className="fa fa-user me-sm-2 "></i>
                 Sign Out
               </button>
             </div>
@@ -30,6 +32,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+    // </div>
   );
 };
 
