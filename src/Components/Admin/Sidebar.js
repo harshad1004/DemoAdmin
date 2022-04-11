@@ -92,7 +92,7 @@ const Sidebar = () => {
             Account Settings
           </h6>
         </li>
-        <Link to="/profile">
+        {/* <Link to="/profile">
           <li className="nav-item">
             <a className="nav-link text-white " href="./pages/profile.html">
               <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -101,7 +101,7 @@ const Sidebar = () => {
               <span className="nav-link-text ms-1">Profile</span>
             </a>
           </li>
-        </Link>
+        </Link> */}
         <Link to="/">
           <li className="nav-item">
             <a className="nav-link text-white " href="./pages/sign-in.html">

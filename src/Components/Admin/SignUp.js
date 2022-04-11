@@ -39,16 +39,16 @@ const SignUp = () => {
                         style={{ marginBottom: "50px" }}
                       >
                         <form role="form">
+                          <label className="form-label">Name</label>
                           <div className="input-group input-group-outline mb-3">
-                            <label className="form-label">Name</label>
                             <input type="text" className="form-control" />
                           </div>
+                          <label className="form-label">Email</label>
                           <div className="input-group input-group-outline mb-3">
-                            <label className="form-label">Email</label>
                             <input type="email" className="form-control" />
                           </div>
+                          <label className="form-label">Password</label>
                           <div className="input-group input-group-outline mb-3">
-                            <label className="form-label">Password</label>
                             <input type="password" className="form-control" />
                           </div>
 

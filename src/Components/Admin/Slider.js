@@ -22,7 +22,7 @@ const Slider = () => {
     const data = slide;
     console.log(data, "data");
     setSlider(slide);
-  }; 
+  };
   return (
     <>
       <div className="container-fluid py-4">
@@ -71,12 +71,9 @@ const Slider = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {/* {slider?.map((slide) => ( */}
                       <tr>
                         <td className="align-middle text-center text-sm">
-                          <p className="text-lg font-weight-bold mb-0">
-                            {/* {slider.id} */}1
-                          </p>
+                          <p className="text-lg font-weight-bold mb-0">1</p>
                         </td>
                         <td className="align-middle text-center text-sm">
                           <div>
@@ -96,16 +93,11 @@ const Slider = () => {
                           </span>
                         </td>
                         <td className="align-middle text-center text-lg">
-                          <button
-                            className="badge badge-sm bg-gradient-danger"
-                            // data-toggle="tooltip"
-                            // data-original-title="Edit user"
-                          >
+                          <button className="badge badge-sm bg-gradient-danger">
                             Delete
                           </button>
                         </td>
                       </tr>
-                      {/* ))} */}
                     </tbody>
                   </table>
                 </div>
