@@ -37,7 +37,11 @@ const Contact = () => {
                       <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
                         Message
                       </th>
+                      <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                        Delete
+                      </th>
                     </tr>
+                    
                   </thead>
                   <tbody>
                     <tr>
@@ -64,7 +68,13 @@ const Contact = () => {
                           never give up
                         </p>
                       </td>
+                      <td className="align-middle text-center text-lg">
+                        <button className="badge badge-sm bg-gradient-danger">
+                          Delete
+                        </button>
+                      </td>
                     </tr>
+                    
                   </tbody>
                 </table>
               </div>

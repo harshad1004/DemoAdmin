@@ -14,7 +14,7 @@ const Sidebar = () => {
           id="iconSidenav"
         ></i> */}
 
-        <a className="navbar-brand m-0" href="/sidebar" target="_blank">
+        <a className="navbar-brand m-0" href="/" target="_blank">
           <div className="row">
             <div className="col-md-2">
               <i
