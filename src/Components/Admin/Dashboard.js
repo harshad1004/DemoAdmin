@@ -4,7 +4,7 @@ const Dashboard = () => {
   return (
     <div
       className="container"
-      style={{ margin: "40px", paddingBottom: "20px" }}
+      style={{ margin: "40px", paddingBottom: "10%", paddingRight: "10%" }}
     >
       <div className="row" style={{ marginBottom: "10%", marginTop: "15%" }}>
         <div className="col-md-6">
@@ -71,6 +71,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+
       <div className="row">
         <div className="col-md-6">
           <div
