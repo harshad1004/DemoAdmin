@@ -1,85 +1,89 @@
 import React from "react";
+import AddGallery from "./AddGallery";
 
 const Gallery = () => {
   return (
-    <div class="row mt-4">
-      <div class="col-lg-4 col-md-6 mt-4 mb-4">
-        <div class="card z-index-2 ">
-          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-            <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-              <div class="chart">
-                <canvas
-                  id="chart-bars"
-                  class="chart-canvas"
-                  height="170"
-                ></canvas>
+    <>
+      <div className="container-fluid py-4">
+        <div className="row">
+          <div className="col-12">
+            <div className="card my-4">
+              <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div className="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                  <div className="row">
+                    <div className="col-md-11">
+                      <h4 className="text-white text-capitalize ps-3">
+                        Gallery Table
+                      </h4>
+                    </div>
+                    <div className="col-md-1 text-white text-capitalize ps-3">
+                      <i
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        className="material-icons opacity-10"
+                        style={{ fontSize: "40px" }}
+                      >
+                        post_add
+                      </i>
+                    </div>
+                    <></>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <h6 class="mb-0 ">Website Views</h6>
-            <p class="text-sm ">Last Campaign Performance</p>
-            <hr class="dark horizontal" />
-            <div class="d-flex ">
-              <i class="material-icons text-sm my-auto me-1">schedule</i>
-              <p class="mb-0 text-sm"> campaign sent 2 days ago </p>
+              <div className="card-body px-0 pb-2">
+                <div className="table-responsive p-0">
+                  <table className="table align-items-center mb-0">
+                    <thead>
+                      <tr>
+                        <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                          ID
+                        </th>
+                        <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                          IMAGE
+                        </th>
+                        <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                          STATUS
+                        </th>
+                        <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                          DELETE
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="align-middle text-center text-sm">
+                          <p className="text-lg font-weight-bold mb-0">1</p>
+                        </td>
+                        <td className="align-middle text-center text-sm">
+                          <div>
+                            <img
+                              src="../assets/img/team-2.jpg"
+                              className="avatar avatar-xl me-3 border-radius-lg"
+                              alt="user1"
+                            />
+                          </div>
+                        </td>
+                        <td className="align-middle text-center text-lg">
+                          <span className="badge badge-sm bg-gradient-success">
+                            Active
+                          </span>
+                        </td>
+                        <td className="align-middle text-center text-lg">
+                          <button className="badge badge-sm bg-gradient-danger">
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 mt-4 mb-4">
-        <div class="card z-index-2  ">
-          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-            <div class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1">
-              <div class="chart">
-                <canvas
-                  id="chart-line"
-                  class="chart-canvas"
-                  height="170"
-                ></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <h6 class="mb-0 "> Daily Sales </h6>
-            <p class="text-sm ">
-              {" "}
-              (<span class="font-weight-bolder">+15%</span>) increase in today
-              sales.{" "}
-            </p>
-            <hr class="dark horizontal" />
-            <div class="d-flex ">
-              <i class="material-icons text-sm my-auto me-1">schedule</i>
-              <p class="mb-0 text-sm"> updated 4 min ago </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mt-4 mb-3">
-        <div class="card z-index-2 ">
-          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-            <div class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1">
-              <div class="chart">
-                <canvas
-                  id="chart-line-tasks"
-                  class="chart-canvas"
-                  height="170"
-                ></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <h6 class="mb-0 ">Completed Tasks</h6>
-            <p class="text-sm ">Last Campaign Performance</p>
-            <hr class="dark horizontal" />
-            <div class="d-flex ">
-              <i class="material-icons text-sm my-auto me-1">schedule</i>
-              <p class="mb-0 text-sm">just updated</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <AddGallery></AddGallery>
+    </>
   );
 };
 

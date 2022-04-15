@@ -1,136 +1,125 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 const Contact = () => {
+  const [contact, setContact] = useState([]);
+  const token = localStorage.getItem("Token");
+  //console.log(token, "token");
+  useEffect(() => {
+    axios
+      .get(
+        `http://localhost:5000/api/contactUs`,
+
+        {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      .then((data) => {
+        if (data.status) {
+          setContact(data.data.contactusdata);
+        }
+       console.log("response", data);
+      })
+      .catch((err) => {
+        console.log(err.response.data);
+      });
+  }, []);
+  //console.log(contact, "contact");
+  const DeleteContact = () => {
+    // console.log()
+  };
   return (
-    <>
+    <div className="container-fluid py-4">
       <div className="row">
-        <div className="col-md-7 mt-4">
-          <div className="card">
-            <div className="card-header pb-0 px-3">
-              <h6 className="mb-0">Billing Information</h6>
+        <div className="col-12">
+          <div className="card my-4">
+            <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div className="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <div className="row">
+                  <div className="col-md-11">
+                    <h4 className="text-white text-capitalize ps-3">
+                      Contact Information
+                    </h4>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="card-body pt-4 p-3">
-              <ul className="list-group">
-                <li className="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
-                  <div className="d-flex flex-column">
-                    <h6 className="mb-3 text-sm">Oliver Liam</h6>
-                    <span className="mb-2 text-xs">
-                      Company Name:{" "}
-                      <span className="text-dark font-weight-bold ms-sm-2">
-                        Viking Burrito
-                      </span>
-                    </span>
-                    <span className="mb-2 text-xs">
-                      Email Address:{" "}
-                      <span className="text-dark ms-sm-2 font-weight-bold">
-                        oliver@burrito.com
-                      </span>
-                    </span>
-                    <span className="text-xs">
-                      VAT Number:{" "}
-                      <span className="text-dark ms-sm-2 font-weight-bold">
-                        FRB1235476
-                      </span>
-                    </span>
-                  </div>
-                  <div className="ms-auto text-end">
-                    <a
-                      className="btn btn-link text-danger text-gradient px-3 mb-0"
-                      href="javascript:;"
-                    >
-                      <i className="material-icons text-sm me-2">delete</i>
-                      Delete
-                    </a>
-                    <a
-                      className="btn btn-link text-dark px-3 mb-0"
-                      href="javascript:;"
-                    >
-                      <i className="material-icons text-sm me-2">edit</i>Edit
-                    </a>
-                  </div>
-                </li>
-                <li className="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
-                  <div className="d-flex flex-column">
-                    <h6 className="mb-3 text-sm">Lucas Harper</h6>
-                    <span className="mb-2 text-xs">
-                      Company Name:{" "}
-                      <span className="text-dark font-weight-bold ms-sm-2">
-                        Stone Tech Zone
-                      </span>
-                    </span>
-                    <span className="mb-2 text-xs">
-                      Email Address:{" "}
-                      <span className="text-dark ms-sm-2 font-weight-bold">
-                        lucas@stone-tech.com
-                      </span>
-                    </span>
-                    <span className="text-xs">
-                      VAT Number:{" "}
-                      <span className="text-dark ms-sm-2 font-weight-bold">
-                        FRB1235476
-                      </span>
-                    </span>
-                  </div>
-                  <div className="ms-auto text-end">
-                    <a
-                      className="btn btn-link text-danger text-gradient px-3 mb-0"
-                      href="javascript:;"
-                    >
-                      <i className="material-icons text-sm me-2">delete</i>
-                      Delete
-                    </a>
-                    <a
-                      className="btn btn-link text-dark px-3 mb-0"
-                      href="javascript:;"
-                    >
-                      <i className="material-icons text-sm me-2">edit</i>Edit
-                    </a>
-                  </div>
-                </li>
-                <li className="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
-                  <div className="d-flex flex-column">
-                    <h6 className="mb-3 text-sm">Ethan James</h6>
-                    <span className="mb-2 text-xs">
-                      Company Name:{" "}
-                      <span className="text-dark font-weight-bold ms-sm-2">
-                        Fiber Notion
-                      </span>
-                    </span>
-                    <span className="mb-2 text-xs">
-                      Email Address:{" "}
-                      <span className="text-dark ms-sm-2 font-weight-bold">
-                        ethan@fiber.com
-                      </span>
-                    </span>
-                    <span className="text-xs">
-                      VAT Number:{" "}
-                      <span className="text-dark ms-sm-2 font-weight-bold">
-                        FRB1235476
-                      </span>
-                    </span>
-                  </div>
-                  <div className="ms-auto text-end">
-                    <a
-                      className="btn btn-link text-danger text-gradient px-3 mb-0"
-                      href="javascript:;"
-                    >
-                      <i className="material-icons text-sm me-2">delete</i>
-                      Delete
-                    </a>
-                    <a
-                      className="btn btn-link text-dark px-3 mb-0"
-                      href="javascript:;"
-                    >
-                      <i className="material-icons text-sm me-2">edit</i>Edit
-                    </a>
-                  </div>
-                </li>
-              </ul>
+            <div className="card-body px-0 pb-2">
+              <div className="table-responsive p-0">
+                <table className="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                        ID
+                      </th>
+                      <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                        Name
+                      </th>
+                      <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                        email
+                      </th>
+                      <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                        subject
+                      </th>
+                      <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                        Message
+                      </th>
+                      <th className="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                        Delete
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {contact.map((contact, index) => {
+                    
+                      return (
+                        <tr>
+                          <td className="align-middle text-center text-sm">
+                            <p className="text-lg font-weight-bold mb-0">
+                              {index}
+                            </p>
+                          </td>
+                          <td className="align-middle text-center text-sm">
+                            <p className="text-lg font-weight-bold mb-0">
+                              {contact.name}
+                            </p>
+                          </td>
+                          <td className="align-middle text-center text-sm">
+                            <p className="text-lg font-weight-bold mb-0">
+                              {contact.email}
+                            </p>
+                          </td>
+                          <td className="align-middle text-center text-sm">
+                            <p className="text-lg font-weight-bold mb-0">
+                              {contact.subject}
+                            </p>
+                          </td>
+                          <td className="align-middle text-center text-sm ">
+                            <p className="text-lg font-weight-bold mb-0 ">
+                              {contact.message}
+                            </p>
+                          </td>
+                          <td className="align-middle text-center text-lg">
+                            <button
+                              className="badge badge-sm bg-gradient-danger"
+                              type="submit"
+                              onClick={DeleteContact}
+                            >
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-        </div>{" "}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

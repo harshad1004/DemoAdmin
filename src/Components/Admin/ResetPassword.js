@@ -4,12 +4,14 @@ const ResetPassword = () => {
   return (
     <main className="main-content  mt-0">
       <div
-        className="page-header align-items-start min-vh-100"
+        className="page-header align-items-start min-vh-80"
         style={{
           backgroundImage: `url(${
             process.env.PUBLIC_URL +
             "./assets/img/illustrations/illustration-signin.jpg"
           })`,
+          width: "95%",
+          borderRadius: "15px",
         }}
       >
         <span className="mask bg-gradient-dark opacity-6"></span>
@@ -33,12 +35,12 @@ const ResetPassword = () => {
                     className="text-start"
                     style={{ padding: "20px" }}
                   >
+                    <label className="form-label">Password</label>
                     <div className="input-group input-group-outline mb-3">
-                      <label className="form-label">Password</label>
                       <input type="password" className="form-control" />
                     </div>
+                    <label className="form-label">Retype Password</label>
                     <div className="input-group input-group-outline mb-3">
-                      <label className="form-label">Retype Password</label>
                       <input type="password" className="form-control" />
                     </div>
                     {/* <div className="form-check form-switch d-flex align-items-center mb-3">

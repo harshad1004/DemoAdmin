@@ -4,7 +4,7 @@ const Dashboard = () => {
   return (
     <div
       className="container"
-      style={{ margin: "40px", paddingBottom: "20px" }}
+      style={{ margin: "40px", paddingBottom: "10%", paddingRight: "10%" }}
     >
       <div className="row" style={{ marginBottom: "10%", marginTop: "15%" }}>
         <div className="col-md-6">
@@ -22,7 +22,7 @@ const Dashboard = () => {
                   width="50"
                   height="50"
                   fill="currentColor"
-                  class="bi bi-person-lines-fill"
+                  className="bi bi-person-lines-fill"
                   viewBox="0 0 16 16"
                 >
                   <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
@@ -71,6 +71,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+
       <div className="row">
         <div className="col-md-6">
           <div
@@ -119,7 +120,7 @@ const Dashboard = () => {
                   width="50"
                   height="50"
                   fill="currentColor"
-                  class="bi bi-file-earmark-person-fill"
+                  className="bi bi-file-earmark-person-fill"
                   viewBox="0 0 16 16"
                 >
                   <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755z" />

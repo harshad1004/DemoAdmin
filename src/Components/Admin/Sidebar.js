@@ -1,89 +1,107 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
+import React, { useContext}from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { UserContext } from "../context/AuthContext";
 const Sidebar = () => {
+  const  {logout} =  useContext(UserContext)
+  const navigate =  useNavigate()
+  const Signout = (e) => {
+    alert();
+    logout()
+    localStorage.removeItem("user");
+    localStorage.removeItem("Token");
+    navigate("/")
+
+  }
   return (
     <div
       className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
       id="sidenav-main"
     >
       <div className="sidenav-header">
-        <i
+        {/* <i
           className="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
           aria-hidden="true"
           id="iconSidenav"
-        ></i>
+        ></i> */}
 
-        <a className="navbar-brand m-0" href="/sidebar" target="_blank">
-          <i
-            className="material-icons opacity-10"
-            style={{ color: "white", fontSize: "30px" }}
-          >
-            admin_panel_settings
-          </i>
-          <span
-            className="font-weight-bold text-white"
-            style={{ padding: "20px", fontSize: "20px" }}
-          >
-            ADMIN PANEL
-          </span>
+        <a className="navbar-brand m-0" href="/" target="_blank">
+          <div className="row">
+            <div className="col-md-2">
+              <i
+                className="material-icons opacity-10"
+                style={{ color: "white", fontSize: "30px" }}
+              >
+                admin_panel_settings
+              </i>
+            </div>
+            <div className="col-md-10">
+              <span
+                className="font-weight-bold text-white"
+                style={{ padding: "20px", fontSize: "20px" }}
+              >
+                ADMIN PANEL
+              </span>
+            </div>
+          </div>
         </a>
       </div>
       <hr className="horizontal light mt-0 mb-2" />
 
-      <ul className="navbar-nav">
+      <ul className="navbar-nav ">
         <Link to="/slider">
-          <li className="nav-item">
-            <a
+          <li className="nav-item" style={{ marginBottom: "10px" }}>
+            <div
               className="nav-link text-white active bg-gradient-primary"
-              href="./pages/dashboard.html"
+              // href="./pages/dashboard.html"
             >
               <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i className="material-icons opacity-10">image</i>
               </div>
               <span className="nav-link-text ms-1">Slider</span>
-            </a>
+            </div>
           </li>
         </Link>
         <Link to="/contact">
-          <li className="nav-item">
-            <a
+          <li className="nav-item" style={{ marginBottom: "10px" }}>
+            <div
               className="nav-link text-white active bg-gradient-primary"
-              href="./pages/dashboard.html"
+              // href="./pages/dashboard.html"
             >
               <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i className="material-icons opacity-10">
-                  <span class="material-icons-outlined">import_contacts</span>
+                  <span className="material-icons-outlined">
+                    import_contacts
+                  </span>
                 </i>
               </div>
               <span className="nav-link-text ms-1">Contact</span>
-            </a>
+            </div>
           </li>
         </Link>
         <Link to="/about">
-          <li className="nav-item">
-            <a
+          <li className="nav-item" style={{ marginBottom: "10px" }}>
+            <div
               className="nav-link text-white active bg-gradient-primary"
-              href="./pages/dashboard.html"
+              // href="./pages/dashboard.html"
             >
               <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i className="material-icons opacity-10">groups</i>
               </div>
               <span className="nav-link-text ms-1">About</span>
-            </a>
+            </div>
           </li>
         </Link>
         <Link to="/gallery">
-          <li className="nav-item">
-            <a
+          <li className="nav-item" style={{ marginBottom: "10px" }}>
+            <div
               className="nav-link text-white active bg-gradient-primary"
-              href="./pages/dashboard.html"
+              // href="./pages/dashboard.html"
             >
               <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i className="material-icons opacity-10">collections</i>
               </div>
               <span className="nav-link-text ms-1">Gallery</span>
-            </a>
+            </div>
           </li>
         </Link>
 
@@ -92,34 +110,33 @@ const Sidebar = () => {
             Account Settings
           </h6>
         </li>
-        <Link to="/profile">
+       
+    
           <li className="nav-item">
-            <a className="nav-link text-white " href="./pages/profile.html">
-              <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i className="material-icons opacity-10">person</i>
-              </div>
-              <span className="nav-link-text ms-1">Profile</span>
-            </a>
-          </li>
-        </Link>
-        <Link to="/">
-          <li className="nav-item">
-            <a className="nav-link text-white " href="./pages/sign-in.html">
+            <div className="nav-link text-white " href="./pages/sign-in.html">
               <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i className="material-icons opacity-10">login</i>
               </div>
-              <span className="nav-link-text ms-1">Sign In</span>
-            </a>
+           
+            
+              <button  onClick={Signout} >
+                <span className="nav-link-text ms-1">
+                Sign out
+                </span>
+               </button>
+              
+            </div>
           </li>
-        </Link>
+       
         <Link to="/reset">
           <li className="nav-item">
-            <a className="nav-link text-white " href="./pages/sign-up.html">
+            <div className="nav-link text-white " href="./pages/sign-up.html">
               <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i className="material-icons opacity-10">lock</i>
               </div>
+          
               <span className="nav-link-text ms-1">Reset Password</span>
-            </a>
+            </div>
           </li>
         </Link>
       </ul>

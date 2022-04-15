@@ -15,23 +15,40 @@ const AddAbout = () => {
               <h5 className="modal-title" id="exampleModalLabel">
                 Add New Slides
               </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
             </div>
             <div className="modal-body">
               <form>
                 <div className="form-group">
-                  <label>Password</label>
+                  <label htmlFor="recipient-name" className="col-form-label">
+                    Image
+                  </label>
                   <input
-                    style={{ border: "1px solid !important" }}
-                    type="password"
+                    // style={{ border: "1px solid" }}
+                    type="file"
                     className="form-control"
-                    id="exampleInputPassword1"
-                    placeholder="Password"
+                    id="recipient-name"
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="recipient-name" className="col-form-label">
+                    Name
+                  </label>
+                  <input
+                    style={{ border: "1px solid" }}
+                    type="text"
+                    className="form-control"
+                    id="recipient-name"
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="message-text" className="col-form-label">
+                    Description
+                  </label>
+                  <input
+                    style={{ border: "1px solid" }}
+                    type="text"
+                    className="form-control"
+                    id="recipient-name"
                   />
                 </div>
               </form>
