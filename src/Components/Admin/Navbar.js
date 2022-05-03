@@ -3,10 +3,6 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    // <div
-    //   className="bg-gradient-primary border-radius-lg"
-    //   style={{ marginTop: "18px" }}
-    // >
     <nav
       className="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl"
       id="navbarBlur"
@@ -32,7 +28,6 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-    // </div>
   );
 };
 
